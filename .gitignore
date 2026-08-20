@@ -1,0 +1,27 @@
+# Secrets. odoo_agent_forge/config.py reads odoo_agent_forge/.env for the API
+# keys used during dataset generation. It must never be committed.
+.env
+.env.*
+!.env.example
+
+# Model weights. A LoRA adapter here is ~1 GB because lm_head is a target
+# module, which is past GitHub's LFS free tier. See the README: the adapter is
+# rebuilt by training, and the merged/GGUF artefacts by export_gguf.py.
+training/runs/**/adapter/
+training/runs/**/checkpoint-*/
+training/runs/**/merged-16bit/
+training/runs/**/gguf/
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+
+# Local state and scratch
+__pycache__/
+*.py[cod]
+*.db
+*.log
+.venv/
+venv/
+outputs/

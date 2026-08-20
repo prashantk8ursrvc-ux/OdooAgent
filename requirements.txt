@@ -1,0 +1,10 @@
+ollama
+pydantic
+pydantic-settings
+rich
+tiktoken
+tenacity
+python-dotenv
+aiosqlite
+aiofiles
+

@@ -1,0 +1,7 @@
+# The datasets are tracked with Git LFS. training/data/qwen3_4b/train.jsonl is
+# 136 MB, past GitHub's 100 MB hard limit for a normal file, and the generation
+# cache is 92 MB. Tracking every .jsonl keeps that consistent as they grow.
+#
+# Clone with LFS installed, or these arrive as pointer files:
+#     git lfs install && git clone <url>
+*.jsonl filter=lfs diff=lfs merge=lfs -text
